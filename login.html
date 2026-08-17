@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Coffee Market</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+    
+    <div class="login-container">
+        <!-- Left Side Image -->
+        <div class="login-image-side">
+            <div class="overlay">
+                <div class="quote-box">
+                    <h2>"Life is too short for bad coffee."</h2>
+                    <p>- Welcome back</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side Form (Glassmorphism) -->
+        <div class="login-form-side">
+            <div class="login-glass-card">
+                <a href="index.html" class="logo" style="display: flex; align-items: center; justify-content: center; text-decoration: none;">
+                    <img src="assets/logo_0019.webp" alt="Coffee Store Logo" style="height: 50px; width: auto; filter: brightness(0) saturate(100%) invert(80%) sepia(26%) saturate(674%) hue-rotate(345deg) brightness(85%) contrast(85%);">
+                </a>
+                <div style="text-align: center; margin-top: 0.5rem; margin-bottom: 1.5rem;">
+                    <a href="index.html" style="color: var(--accent-color); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--accent-color)'">&larr; Back to Home</a>
+                </div>
+                <h3>Sign in to your account</h3>
+                <p class="subtitle">Enter your details to proceed.</p>
+
+                <!-- Role Selection -->
+                <div class="role-selector">
+                    <div class="role-slider"></div>
+                    <button type="button" class="role-btn active" data-role="customer">Customer</button>
+                    <button type="button" class="role-btn" data-role="admin">Admin</button>
+                </div>
+
+                <form class="glass-form" id="loginForm">
+                    <input type="hidden" id="selectedRole" value="customer">
+                    
+                    <div class="input-group">
+                        <input type="email" id="email" placeholder=" " required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address.">
+                        <label for="email">Email Address</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="password" placeholder=" " required minlength="8" title="Password must be at least 8 characters long.">
+                        <label for="password">Password</label>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <label class="remember-me">
+                            <input type="checkbox"> Remember me
+                        </label>
+                        <a href="404.html" class="forgot-pass">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn-dark full-width">Sign In</button>
+                    
+                    <div class="divider">
+                        <span>or continue with</span>
+                    </div>
+
+                    <div class="social-login">
+                        <button type="button" class="btn-social">Google</button>
+                        <button type="button" class="btn-social">Facebook</button>
+                    </div>
+                </form>
+
+                <p class="signup-link">Don't have an account? <a href="signup.html">Sign up now</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

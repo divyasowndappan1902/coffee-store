@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Coffee Market</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none;"><img src="assets/logo_0019.webp" alt="Coffee Store" style="height: 40px; width: auto; filter: brightness(0) saturate(100%) invert(80%) sepia(26%) saturate(674%) hue-rotate(345deg) brightness(85%) contrast(85%);"></a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+        </nav>
+        <div class="nav-right" style="display: flex; align-items: center; gap: 1.5rem;">
+            <a href="login.html" class="login-btn">Login</a>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 1. Page Header -->
+    <section class="page-header bg-dark text-white">
+        <div class="container text-center">
+            <h1 style="color: white; font-size: 3rem;">Get In <span class="highlight">Touch</span></h1>
+            <p>We'd love to hear from you.</p>
+        </div>
+    </section>
+
+    <!-- 2 & 3. Contact Form & Details -->
+    <section class="section">
+        <div class="container split-section">
+            <div class="split-text">
+                <h2>Contact <span class="highlight">Information</span></h2>
+                <p style="margin-bottom: 2rem;">Reach out for general inquiries, wholesale requests, or just to say hello.</p>
+                <div style="margin-bottom: 1rem;">
+                    <strong>Email:</strong> hello@coffeestore.com
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <strong>Phone:</strong> +1 (555) 123-4567
+                </div>
+                <div style="margin-bottom: 1rem;">
+                    <strong>Support Hours:</strong> Mon-Fri 9am - 5pm EST
+                </div>
+            </div>
+            <div style="flex: 1; padding: 2rem; background: var(--bg-color); box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-radius: 8px;">
+                <form>
+                    <input type="text" placeholder="Your Name" required style="width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 4px;">
+                    <input type="email" placeholder="Your Email" required style="width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 4px;">
+                    <input type="text" placeholder="Subject" required style="width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 4px;">
+                    <textarea placeholder="Your Message" rows="4" required style="width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 4px; font-family: inherit;"></textarea>
+                    <button type="submit" class="btn btn-light" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4 & 5. Store Locations -->
+    <section class="section bg-light text-center">
+        <div class="container">
+            <h2>Our <span class="highlight">Locations</span></h2>
+            <div class="grid-2 mt-2">
+                <div class="card">
+                    <h4>Downtown Roastery</h4>
+                    <p>123 Main St, Cityville, ST 12345</p>
+                    <p>Open 6am - 8pm Daily</p>
+                </div>
+                <div class="card">
+                    <h4>Uptown Cafe</h4>
+                    <p>456 Oak Ave, Cityville, ST 12345</p>
+                    <p>Open 7am - 7pm Daily</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Social Media Hub -->
+    <section class="section bg-dark text-white text-center">
+        <div class="container">
+            <h2 style="color: white;">Follow <span class="highlight">Us</span></h2>
+            <p>Join our community online.</p>
+            <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem;">
+                <a href="404.html" class="btn btn-outline" style="border-color: white; color: white;">Instagram</a>
+                <a href="404.html" class="btn btn-outline" style="border-color: white; color: white;">Twitter</a>
+                <a href="404.html" class="btn btn-outline" style="border-color: white; color: white;">Facebook</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hours of Operation -->
+    <section class="section bg-light text-center">
+        <div class="container">
+            <h2 style="color: var(--primary-color); margin-bottom: 2rem;">Hours of Operation</h2>
+            <div style="color: #999; line-height: 2;">
+                <p>Mon - Fri: 6:00 AM - 7:00 PM</p>
+                <p>Saturday: 7:00 AM - 8:00 PM</p>
+                <p>Sunday: 8:00 AM - 5:00 PM</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frequently Asked Questions -->
+    <section class="section bg-light" style="padding-top: 0;">
+        <div class="container">
+            <h2 class="text-center" style="color: var(--primary-color); margin-bottom: 3rem;">Frequently Asked Questions</h2>
+            <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
+                <div class="card" style="border: 1px solid #eaeaea; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); padding: 2rem; background: white; text-align: left;">
+                    <h4 style="margin-bottom: 0.5rem; color: #222; font-size: 1.2rem;">Do you offer vegan options?</h4>
+                    <p style="color: #666; margin: 0;">Yes, we have oat, almond, and soy milk available, plus vegan pastries.</p>
+                </div>
+                <div class="card" style="border: 1px solid #eaeaea; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); padding: 2rem; background: white; text-align: left;">
+                    <h4 style="margin-bottom: 0.5rem; color: #222; font-size: 1.2rem;">Do you ship internationally?</h4>
+                    <p style="color: #666; margin: 0;">Currently, we only ship coffee beans within the US and Canada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+            <footer class="footer" style="background-color: var(--primary-color); padding: 4rem 0 2rem; color: #fff;">
+        <div class="container">
+            <div class="footer-grid" style="display: grid; grid-template-columns: 2fr 1fr 1fr 2fr; gap: 2rem;">
+                <!-- Column 1 -->
+                <div class="footer-col" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    <a href="index.html" class="logo" style="display: flex; align-items: center; text-decoration: none;">
+                        <img src="assets/logo_0019.webp" alt="Coffee Store" style="height: 40px; width: auto; filter: brightness(0) saturate(100%) invert(80%) sepia(26%) saturate(674%) hue-rotate(345deg) brightness(85%) contrast(85%);">
+                        
+                    </a>
+                    <p style="color: #9ca3af; font-size: 0.85rem; line-height: 1.6; max-width: 250px;">
+                        Delivering purity and freshness to your doorstep. Brew better, live healthier.
+                    </p>
+                    <div style="display: flex; gap: 0.8rem; margin-top: 0.5rem;">
+                        <a href="404.html" style="display: flex; justify-content: center; align-items: center; width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; color: white; text-decoration: none; transition: background 0.3s;" onmouseover="this.style.background='var(--accent-color)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">f</a>
+                        <a href="404.html" style="display: flex; justify-content: center; align-items: center; width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; color: white; text-decoration: none; transition: background 0.3s;" onmouseover="this.style.background='var(--accent-color)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">t</a>
+                        <a href="404.html" style="display: flex; justify-content: center; align-items: center; width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; color: white; text-decoration: none; transition: background 0.3s;" onmouseover="this.style.background='var(--accent-color)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">ig</a>
+                        <a href="404.html" style="display: flex; justify-content: center; align-items: center; width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; color: white; text-decoration: none; transition: background 0.3s;" onmouseover="this.style.background='var(--accent-color)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">in</a>
+                    </div>
+                    <div style="color: #9ca3af; font-size: 0.75rem; margin-top: 2rem;">
+                        &copy; 2026 Coffee Store.<br>All Rights Reserved.
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="footer-col">
+                    <h4 style="color: white; font-size: 1rem; margin-bottom: 1.5rem; font-weight: 600;">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+                        <li><a href="index.html" style="color: #9ca3af; text-decoration: none; font-size: 0.85rem; transition: color 0.3s;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='#9ca3af'">Home</a></li>
+                        <li><a href="about.html" style="color: #9ca3af; text-decoration: none; font-size: 0.85rem; transition: color 0.3s;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='#9ca3af'">About</a></li>
+                        <li><a href="blog.html" style="color: #9ca3af; text-decoration: none; font-size: 0.85rem; transition: color 0.3s;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='#9ca3af'">Blog</a></li>
+                        <li><a href="service.html" style="color: #9ca3af; text-decoration: none; font-size: 0.85rem; transition: color 0.3s;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='#9ca3af'">Service</a></li>
+                        <li><a href="contact.html" style="color: #9ca3af; text-decoration: none; font-size: 0.85rem; transition: color 0.3s;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='#9ca3af'">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="footer-col">
+                    <h4 style="color: white; font-size: 1rem; margin-bottom: 1.5rem; font-weight: 600;">Services</h4>
+                    <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.8rem;">
+                        <li><a href="404.html" style="color: #9ca3af; text-decoration: none; font-size: 0.85rem; transition: color 0.3s;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='#9ca3af'">Home Delivery</a></li>
+                        <li><a href="404.html" style="color: #9ca3af; text-decoration: none; font-size: 0.85rem; transition: color 0.3s;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='#9ca3af'">Corporate Solutions</a></li>
+                        <li><a href="404.html" style="color: #9ca3af; text-decoration: none; font-size: 0.85rem; transition: color 0.3s;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='#9ca3af'">Coffee Subscriptions</a></li>
+                        <li><a href="404.html" style="color: #9ca3af; text-decoration: none; font-size: 0.85rem; transition: color 0.3s;" onmouseover="this.style.color='var(--accent-color)'" onmouseout="this.style.color='#9ca3af'">Brewing Equipment</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div class="footer-col">
+                    <h4 style="color: white; font-size: 1rem; margin-bottom: 1.5rem; font-weight: 600;">Newsletter</h4>
+                    <p style="color: #9ca3af; font-size: 0.85rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                        Subscribe to get the latest updates and offers.
+                    </p>
+                    <form style="display: flex; width: 100%;" onsubmit="event.preventDefault(); window.location.href='404.html';">
+                        <input type="email" placeholder="Your Email" style="flex: 1; padding: 0.8rem 1rem; border: none; border-radius: 4px 0 0 4px; outline: none; font-family: var(--font-family); font-size: 0.85rem;" required>
+                        <button type="submit" style="background: var(--accent-color); border: none; padding: 0 1.2rem; border-radius: 0 4px 4px 0; color: white; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.3s;" onmouseover="this.style.background='var(--accent-color-hover)'" onmouseout="this.style.background='var(--accent-color)'">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

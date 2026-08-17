@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - Coffee Market</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body bg-light">
+
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <a href="index.html" class="logo sidebar-logo" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="assets/logo_0019.webp" alt="Coffee Store Logo" style="height: 40px; width: auto;">
+            </a>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" data-target="my-profile" class="active">My Profile</a></li>
+                    <li><a href="#" data-target="order-history">Order History</a></li>
+                    <li><a href="#" data-target="saved-addresses">Saved Addresses</a></li>
+                    <li><a href="#" data-target="payment-methods">Payment Methods</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-bottom">
+                <a href="login.html" class="logout-btn">Log Out</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Topbar -->
+            <header class="dashboard-header">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search coffees, accessories...">
+                </div>
+                <div class="user-profile" style="display: flex; align-items: center; gap: 0.8rem;">
+                    <div class="avatar bg-accent text-white" style="margin-left: 0.5rem;">C</div>
+                    <div style="display: flex; flex-direction: column; line-height: 1.2;">
+                        <span style="font-weight: 600;">Customer Name</span>
+                        <span id="user-email-display" style="font-size: 0.75rem; color: #aaa;">customer@example.com</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <div id="my-profile" class="dashboard-view">
+                <div class="dashboard-title">
+                    <h2>Welcome back!</h2>
+                    <p>Your coffee journey continues.</p>
+                </div>
+
+                <div class="dashboard-grid mt-2">
+                    <!-- Loyalty Card -->
+                    <div class="card loyalty-card bg-dark text-white">
+                        <h3>Coffee Club Rewards</h3>
+                        <div class="points-display">
+                            <span class="points">450</span>
+                            <span class="points-label">Points</span>
+                        </div>
+                        <p>You are only 50 points away from a free bag of beans!</p>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 90%;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Orders -->
+                    <div class="card table-card">
+                        <div class="card-header">
+                            <h3>My Recent Orders</h3>
+                            <a href="404.html" class="btn-link">View All</a>
+                        </div>
+                        <table class="dashboard-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#ORD-085</td>
+                                    <td>Aug 01, 2026</td>
+                                    <td><span class="badge status-completed">Delivered</span></td>
+                                    <td><button class="btn btn-outline btn-sm">Buy Again</button></td>
+                                </tr>
+                                <tr>
+                                    <td>#ORD-054</td>
+                                    <td>Jul 15, 2026</td>
+                                    <td><span class="badge status-completed">Delivered</span></td>
+                                    <td><button class="btn btn-outline btn-sm">Buy Again</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="dashboard-title mt-2">
+                    <h3>Recommended For You</h3>
+                </div>
+                <div class="grid-3 mt-2">
+                    <div class="card product-card">
+                        <img src="assets/guatemalan_antigua.webp" alt="Guatemalan Antigua" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-bottom: 1rem;">
+                        <h4 class="mt-2">Guatemalan Antigua</h4>
+                        <p class="price">$17.00</p>
+                        <a href="404.html" class="btn btn-outline btn-sm">Add to Cart</a>
+                    </div>
+                    <div class="card product-card">
+                        <img src="assets/chemex_brewer.webp" alt="Chemex Brewer" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-bottom: 1rem;">
+                        <h4 class="mt-2">Chemex Brewer 6-Cup</h4>
+                        <p class="price">$45.00</p>
+                        <a href="404.html" class="btn btn-outline btn-sm">Add to Cart</a>
+                    </div>
+                    <div class="card product-card">
+                        <img src="assets/house_decaf.webp" alt="House Blend Decaf" style="width: 100%; height: 150px; object-fit: cover; border-radius: 4px; margin-bottom: 1rem;">
+                        <h4 class="mt-2">House Blend Decaf</h4>
+                        <p class="price">$16.00</p>
+                        <a href="404.html" class="btn btn-outline btn-sm">Add to Cart</a>
+                    </div>
+                </div>
+
+            </div>
+                <div id="order-history" class="dashboard-view" style="display: none;">
+                    <div class="dashboard-title" style="margin-bottom: 1.5rem;">
+                        <h2>Order History</h2>
+                        <p>Track, view, and manage your past and current coffee orders.</p>
+                    </div>
+
+                    <!-- Section 1: Active Orders -->
+                    <div class="card table-card" style="margin-bottom: 2rem;">
+                        <div class="card-header">
+                            <h3>Active & Processing Orders</h3>
+                        </div>
+                        <table class="dashboard-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Date</th>
+                                    <th>Items</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#ORD-092</td>
+                                    <td>Aug 15, 2026</td>
+                                    <td>2x Espresso Blend, 1x Filter Paper</td>
+                                    <td>$42.50</td>
+                                    <td><span class="badge" style="background-color: var(--accent-color); color: white;">Processing</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Section 2: Past Deliveries -->
+                    <div class="card table-card" style="margin-bottom: 2rem;">
+                        <div class="card-header">
+                            <h3>Past Deliveries</h3>
+                        </div>
+                        <table class="dashboard-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Date</th>
+                                    <th>Items</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#ORD-085</td>
+                                    <td>Aug 01, 2026</td>
+                                    <td>1x House Blend Decaf</td>
+                                    <td>$16.00</td>
+                                    <td><span class="badge status-completed">Delivered</span></td>
+                                    <td><button class="btn btn-outline btn-sm">Buy Again</button></td>
+                                </tr>
+                                <tr>
+                                    <td>#ORD-054</td>
+                                    <td>Jul 15, 2026</td>
+                                    <td>3x Single Origin Yirgacheffe</td>
+                                    <td>$65.00</td>
+                                    <td><span class="badge status-completed">Delivered</span></td>
+                                    <td><button class="btn btn-outline btn-sm">Buy Again</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Section 3: Returns & Cancellations -->
+                    <div class="card table-card">
+                        <div class="card-header">
+                            <h3>Returns & Cancellations</h3>
+                        </div>
+                        <table class="dashboard-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Date</th>
+                                    <th>Items</th>
+                                    <th>Status</th>
+                                    <th>Refund Info</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#ORD-032</td>
+                                    <td>May 10, 2026</td>
+                                    <td>1x Cold Brew Kit</td>
+                                    <td><span class="badge" style="background-color: #888; color: white;">Cancelled</span></td>
+                                    <td>Refunded to Visa ****1234</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="saved-addresses" class="dashboard-view" style="display: none;">
+                    <div class="dashboard-title" style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <h2>Saved Addresses</h2>
+                            <p>Manage where your coffee gets delivered.</p>
+                        </div>
+                        <button class="btn btn-dark btn-sm">+ Add New Address</button>
+                    </div>
+
+                    <!-- Section 1: Default Shipping Address -->
+                    <div class="card table-card" style="margin-bottom: 2rem;">
+                        <div class="card-header">
+                            <h3>Default Shipping Address</h3>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                                <div>
+                                    <h4 style="margin-bottom: 0.5rem;">John Doe</h4>
+                                    <p style="color: #bbb; line-height: 1.5; font-size: 0.95rem;">
+                                        123 Coffee Bean Lane, Suite 4B<br>
+                                        Seattle, WA 98101<br>
+                                        United States
+                                    </p>
+                                    <p style="color: #bbb; margin-top: 0.5rem; font-size: 0.95rem;">Phone: (555) 123-4567</p>
+                                </div>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <button class="btn btn-outline btn-sm">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Default Billing Address -->
+                    <div class="card table-card" style="margin-bottom: 2rem;">
+                        <div class="card-header">
+                            <h3>Default Billing Address</h3>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                                <div>
+                                    <h4 style="margin-bottom: 0.5rem;">John Doe</h4>
+                                    <p style="color: #bbb; line-height: 1.5; font-size: 0.95rem;">
+                                        123 Coffee Bean Lane, Suite 4B<br>
+                                        Seattle, WA 98101<br>
+                                        United States
+                                    </p>
+                                    <p style="color: #bbb; margin-top: 0.5rem; font-size: 0.95rem;"><em>Same as shipping address</em></p>
+                                </div>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <button class="btn btn-outline btn-sm">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: Other Saved Addresses -->
+                    <div class="card table-card">
+                        <div class="card-header">
+                            <h3>Other Saved Addresses</h3>
+                        </div>
+                        <div style="padding: 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                                <div>
+                                    <h4 style="margin-bottom: 0.5rem;">Office (Jane Doe)</h4>
+                                    <p style="color: #bbb; line-height: 1.5; font-size: 0.95rem;">
+                                        456 Espresso Ave, Floor 12<br>
+                                        Portland, OR 97204<br>
+                                        United States
+                                    </p>
+                                </div>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <button class="btn btn-outline btn-sm">Edit</button>
+                                    <button class="btn btn-outline btn-sm" style="color: #ff6b6b; border-color: rgba(255,107,107,0.3);">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="payment-methods" class="dashboard-view" style="display: none;">
+                    <div class="dashboard-title" style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <h2>Payment Methods</h2>
+                            <p>Manage your secure payment options.</p>
+                        </div>
+                        <button class="btn btn-dark btn-sm">+ Add New Payment</button>
+                    </div>
+
+                    <!-- Section 1: Default Payment Method -->
+                    <div class="card table-card" style="margin-bottom: 2rem;">
+                        <div class="card-header">
+                            <h3>Default Payment Method</h3>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div style="display: flex; align-items: center; gap: 1rem;">
+                                    <div style="width: 50px; height: 35px; background: #1a1f36; border-radius: 4px; display: flex; justify-content: center; align-items: center; color: white; font-weight: bold; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.2);">VISA</div>
+                                    <div>
+                                        <h4 style="margin-bottom: 0.2rem;">Visa ending in 1234</h4>
+                                        <p style="color: #bbb; font-size: 0.9rem;">Expires 12/2028</p>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <button class="btn btn-outline btn-sm">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Other Saved Cards -->
+                    <div class="card table-card" style="margin-bottom: 2rem;">
+                        <div class="card-header">
+                            <h3>Other Saved Cards</h3>
+                        </div>
+                        <div style="padding: 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div style="display: flex; align-items: center; gap: 1rem;">
+                                    <div style="width: 50px; height: 35px; background: #eb001b; border-radius: 4px; display: flex; justify-content: center; align-items: center; color: white; font-weight: bold; font-size: 0.8rem;">MC</div>
+                                    <div>
+                                        <h4 style="margin-bottom: 0.2rem;">Mastercard ending in 9876</h4>
+                                        <p style="color: #bbb; font-size: 0.9rem;">Expires 05/2027</p>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <button class="btn btn-outline btn-sm">Make Default</button>
+                                    <button class="btn btn-outline btn-sm" style="color: #ff6b6b; border-color: rgba(255,107,107,0.3);">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: Alternative Payment Methods -->
+                    <div class="card table-card">
+                        <div class="card-header">
+                            <h3>Alternative Payment Methods</h3>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <div style="display: flex; align-items: center; gap: 1rem;">
+                                    <div style="width: 50px; height: 35px; background: #003087; border-radius: 4px; display: flex; justify-content: center; align-items: center; color: white; font-weight: bold; font-size: 0.7rem;">PayPal</div>
+                                    <div>
+                                        <h4 style="margin-bottom: 0.2rem;">PayPal Account</h4>
+                                        <p style="color: #bbb; font-size: 0.9rem;">Linked to john.doe@example.com</p>
+                                    </div>
+                                </div>
+                                <div style="display: flex; gap: 0.5rem;">
+                                    <button class="btn btn-outline btn-sm" style="color: #ff6b6b; border-color: rgba(255,107,107,0.3);">Unlink</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const links = document.querySelectorAll(".sidebar-nav a");
+        const views = document.querySelectorAll(".dashboard-view");
+
+        links.forEach(link => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute("data-target");
+                if (!targetId) return;
+
+                links.forEach(l => l.classList.remove("active"));
+                link.classList.add("active");
+
+                views.forEach(view => {
+                    if (view.id === targetId) {
+                        view.style.display = "block";
+                    } else {
+                        view.style.display = "none";
+                    }
+                });
+            });
+        });
+    });
+</script>
+<script src="script.js"></script>
+</body>
+</html>

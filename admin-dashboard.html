@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Coffee Market</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-body bg-light">
+
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <a href="index.html" class="logo sidebar-logo" style="display: flex; align-items: center; text-decoration: none;">
+                <img src="assets/logo_0019.webp" alt="Coffee Store Logo" style="height: 40px; width: auto;">
+            </a>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" data-target="dashboard" class="active">Dashboard</a></li>
+                    <li><a href="#" data-target="orders">Orders</a></li>
+                    <li><a href="#" data-target="products">Products</a></li>
+                    <li><a href="#" data-target="customers">Customers</a></li>
+                    <li><a href="#" data-target="analytics">Analytics</a></li>
+                    <li><a href="#" data-target="settings">Settings</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-bottom">
+                <a href="login.html" class="logout-btn">Log Out</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Topbar -->
+            <header class="dashboard-header">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search orders, products...">
+                </div>
+                <div class="user-profile" style="display: flex; align-items: center; gap: 0.8rem;">
+                    <div class="avatar bg-primary text-white" style="margin-left: 0.5rem;">A</div>
+                    <div style="display: flex; flex-direction: column; line-height: 1.2;">
+                        <span style="font-weight: 600;">Admin User</span>
+                        <span id="user-email-display" style="font-size: 0.75rem; color: #aaa;">admin@example.com</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <div id="dashboard" class="dashboard-view">
+                <div class="dashboard-title">
+                    <h2>Overview</h2>
+                    <p>Welcome back, Admin!</p>
+                </div>
+
+                <!-- Stat Cards -->
+                <div class="stat-cards grid-3">
+                    <div class="card stat-card">
+                        <h4>Total Revenue</h4>
+                        <div class="stat-value">$12,450</div>
+                        <span class="stat-change positive">+15% this week</span>
+                    </div>
+                    <div class="card stat-card">
+                        <h4>Active Orders</h4>
+                        <div class="stat-value">34</div>
+                        <span class="stat-change positive">+5 new today</span>
+                    </div>
+                    <div class="card stat-card">
+                        <h4>Total Customers</h4>
+                        <div class="stat-value">1,204</div>
+                        <span class="stat-change neutral">Steady</span>
+                    </div>
+                </div>
+
+                <!-- Main Grid Layout -->
+                <div class="dashboard-grid mt-2">
+                    <!-- Recent Orders Table -->
+                    <div class="card table-card">
+                        <div class="card-header">
+                            <h3>Recent Orders</h3>
+                            <a href="404.html" class="btn-link">View All</a>
+                        </div>
+                        <table class="dashboard-table">
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#ORD-092</td>
+                                    <td>John Doe</td>
+                                    <td>Aug 15, 2026</td>
+                                    <td><span class="badge status-pending">Pending</span></td>
+                                    <td>$34.50</td>
+                                </tr>
+                                <tr>
+                                    <td>#ORD-091</td>
+                                    <td>Sarah Smith</td>
+                                    <td>Aug 14, 2026</td>
+                                    <td><span class="badge status-completed">Completed</span></td>
+                                    <td>$18.00</td>
+                                </tr>
+                                <tr>
+                                    <td>#ORD-090</td>
+                                    <td>Michael Brown</td>
+                                    <td>Aug 14, 2026</td>
+                                    <td><span class="badge status-processing">Processing</span></td>
+                                    <td>$52.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Inventory Alert -->
+                    <div class="card alert-card">
+                        <h3>Inventory Alerts</h3>
+                        <ul class="alert-list">
+                            <li>
+                                <div class="alert-info">
+                                    <strong>Ethiopian Yirgacheffe</strong>
+                                    <span>Only 5 bags left</span>
+                                </div>
+                                <button class="btn btn-outline btn-sm">Restock</button>
+                            </li>
+                            <li>
+                                <div class="alert-info">
+                                    <strong>Oat Milk (Barista Ed.)</strong>
+                                    <span>Low stock</span>
+                                </div>
+                                <button class="btn btn-outline btn-sm">Restock</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+                
+                <div id="orders" class="dashboard-view" style="display: none;">
+                    <div class="dashboard-title" style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <h2>Orders Management</h2>
+                            <p>Track and fulfill customer orders.</p>
+                        </div>
+                        <button class="btn btn-dark btn-sm">Export Orders</button>
+                    </div>
+
+                    <!-- Section 1: New & Pending Orders -->
+                    <div class="card table-card" style="margin-bottom: 2rem;">
+                        <div class="card-header">
+                            <h3>New & Pending Orders</h3>
+                        </div>
+                        <table class="dashboard-table">
+                            <thead><tr><th>Order ID</th><th>Customer</th><th>Total</th><th>Status</th><th>Action</th></tr></thead>
+                            <tbody>
+                                <tr><td>#ORD-102</td><td>Alice Smith</td><td>$45.00</td><td><span class="badge" style="background:var(--accent-color); color:white;">Pending</span></td><td><button class="btn btn-outline btn-sm">Fulfill</button></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Section 2: In Transit -->
+                    <div class="card table-card" style="margin-bottom: 2rem;">
+                        <div class="card-header">
+                            <h3>In Transit</h3>
+                        </div>
+                        <table class="dashboard-table">
+                            <thead><tr><th>Order ID</th><th>Customer</th><th>Tracking</th><th>Status</th></tr></thead>
+                            <tbody>
+                                <tr><td>#ORD-099</td><td>Bob Jones</td><td>FedEx 123...</td><td><span class="badge" style="background:#f39c12; color:white;">Shipped</span></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Section 3: Completed Orders -->
+                    <div class="card table-card">
+                        <div class="card-header">
+                            <h3>Completed Orders</h3>
+                        </div>
+                        <table class="dashboard-table">
+                            <thead><tr><th>Order ID</th><th>Customer</th><th>Total</th><th>Status</th></tr></thead>
+                            <tbody>
+                                <tr><td>#ORD-085</td><td>Charlie Brown</td><td>$16.00</td><td><span class="badge status-completed">Delivered</span></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div id="products" class="dashboard-view" style="display: none;">
+                    <div class="dashboard-title" style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <h2>Products Catalog</h2>
+                            <p>Manage your inventory and product listings.</p>
+                        </div>
+                        <button class="btn btn-dark btn-sm">+ Add Product</button>
+                    </div>
+
+                    <!-- Section 1: Coffee Beans -->
+                    <div class="card table-card" style="margin-bottom: 2rem;">
+                        <div class="card-header">
+                            <h3>Coffee Beans</h3>
+                        </div>
+                        <table class="dashboard-table">
+                            <thead><tr><th>Product Name</th><th>Stock</th><th>Price</th><th>Action</th></tr></thead>
+                            <tbody>
+                                <tr><td>Ethiopian Yirgacheffe</td><td>45 bags</td><td>$19.50</td><td><button class="btn btn-outline btn-sm">Edit</button></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Section 2: Accessories -->
+                    <div class="card table-card" style="margin-bottom: 2rem;">
+                        <div class="card-header">
+                            <h3>Accessories & Merch</h3>
+                        </div>
+                        <table class="dashboard-table">
+                            <thead><tr><th>Product Name</th><th>Stock</th><th>Price</th><th>Action</th></tr></thead>
+                            <tbody>
+                                <tr><td>Ceramic Pour-Over</td><td>12 units</td><td>$24.00</td><td><button class="btn btn-outline btn-sm">Edit</button></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Section 3: Out of Stock -->
+                    <div class="card table-card">
+                        <div class="card-header">
+                            <h3>Out of Stock / Drafts</h3>
+                        </div>
+                        <table class="dashboard-table">
+                            <thead><tr><th>Product Name</th><th>Status</th><th>Action</th></tr></thead>
+                            <tbody>
+                                <tr><td>Winter Holiday Blend</td><td><span class="badge" style="background:#555; color:white;">Out of Stock</span></td><td><button class="btn btn-outline btn-sm">Restock</button></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div id="customers" class="dashboard-view" style="display: none;">
+                    <div class="dashboard-title" style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <h2>Customer Directory</h2>
+                            <p>View and manage customer accounts.</p>
+                        </div>
+                        <button class="btn btn-dark btn-sm">Export List</button>
+                    </div>
+
+                    <!-- Section 1: Top Customers -->
+                    <div class="card table-card" style="margin-bottom: 2rem;">
+                        <div class="card-header">
+                            <h3>Top Customers</h3>
+                        </div>
+                        <table class="dashboard-table">
+                            <thead><tr><th>Name</th><th>Email</th><th>Total Spent</th><th>Action</th></tr></thead>
+                            <tbody>
+                                <tr><td>Alice Smith</td><td>alice@example.com</td><td>$450.00</td><td><button class="btn btn-outline btn-sm">View Profile</button></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Section 2: New Registrations -->
+                    <div class="card table-card" style="margin-bottom: 2rem;">
+                        <div class="card-header">
+                            <h3>New Registrations (This Week)</h3>
+                        </div>
+                        <table class="dashboard-table">
+                            <thead><tr><th>Name</th><th>Email</th><th>Joined</th><th>Action</th></tr></thead>
+                            <tbody>
+                                <tr><td>Bob Jones</td><td>bob@example.com</td><td>Aug 16, 2026</td><td><button class="btn btn-outline btn-sm">View Profile</button></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Section 3: Subscribers -->
+                    <div class="card table-card">
+                        <div class="card-header">
+                            <h3>Coffee Club Subscribers</h3>
+                        </div>
+                        <table class="dashboard-table">
+                            <thead><tr><th>Name</th><th>Plan</th><th>Status</th><th>Action</th></tr></thead>
+                            <tbody>
+                                <tr><td>Charlie Brown</td><td>2 Bags / Month</td><td><span class="badge status-completed">Active</span></td><td><button class="btn btn-outline btn-sm">Manage</button></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div id="analytics" class="dashboard-view" style="display: none;">
+                    <div class="dashboard-title" style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <h2>Analytics & Reports</h2>
+                            <p>Monitor your store's performance.</p>
+                        </div>
+                        <button class="btn btn-dark btn-sm">Download Report</button>
+                    </div>
+
+                    <!-- Section 1: Sales Overview -->
+                    <div class="card table-card" style="margin-bottom: 2rem;">
+                        <div class="card-header">
+                            <h3>Sales Overview</h3>
+                        </div>
+                        <div style="padding: 1.5rem; display: flex; justify-content: space-around; text-align: center;">
+                            <div>
+                                <h4 style="font-size: 2rem; color: var(--accent-color); margin-bottom: 0.5rem;">$12,450</h4>
+                                <p style="color: #bbb;">Total Revenue (This Month)</p>
+                            </div>
+                            <div>
+                                <h4 style="font-size: 2rem; color: var(--accent-color); margin-bottom: 0.5rem;">342</h4>
+                                <p style="color: #bbb;">Orders Received</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Traffic -->
+                    <div class="card table-card" style="margin-bottom: 2rem;">
+                        <div class="card-header">
+                            <h3>Store Traffic</h3>
+                        </div>
+                        <div style="padding: 1.5rem; display: flex; justify-content: space-around; text-align: center;">
+                            <div>
+                                <h4 style="font-size: 2rem; color: white; margin-bottom: 0.5rem;">5,204</h4>
+                                <p style="color: #bbb; margin-bottom: 1rem;">Unique Visitors</p>
+                                <img src="assets/visitors_chart.webp" alt="Visitors Chart" style="width: 100%; max-width: 150px; border-radius: 8px; opacity: 0.9; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                            </div>
+                            <div>
+                                <h4 style="font-size: 2rem; color: white; margin-bottom: 0.5rem;">4.2%</h4>
+                                <p style="color: #bbb; margin-bottom: 1rem;">Conversion Rate</p>
+                                <img src="assets/conversion_chart.webp" alt="Conversion Chart" style="width: 100%; max-width: 150px; border-radius: 8px; opacity: 0.9; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: Popular Products -->
+                    <div class="card table-card">
+                        <div class="card-header">
+                            <h3>Top Selling Products</h3>
+                        </div>
+                        <table class="dashboard-table">
+                            <thead><tr><th>Product Name</th><th>Units Sold</th><th>Revenue generated</th></tr></thead>
+                            <tbody>
+                                <tr><td>Ethiopian Yirgacheffe</td><td>124</td><td>$2,418.00</td></tr>
+                                <tr><td>House Blend Decaf</td><td>89</td><td>$1,424.00</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div id="settings" class="dashboard-view" style="display: none;">
+                    <div class="dashboard-title" style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <h2>Store Settings</h2>
+                            <p>Configure your storefront preferences.</p>
+                        </div>
+                        <button class="btn btn-dark btn-sm">Save Changes</button>
+                    </div>
+
+                    <!-- Section 1: Store Details -->
+                    <div class="card table-card" style="margin-bottom: 2rem;">
+                        <div class="card-header">
+                            <h3>Store Details</h3>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <div class="input-group" style="margin-bottom: 1rem;">
+                                <input type="text" value="Coffee Store" required>
+                                <label>Store Name</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" value="admin@coffeestore.com" required>
+                                <label>Support Email</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Payment Gateways -->
+                    <div class="card table-card" style="margin-bottom: 2rem;">
+                        <div class="card-header">
+                            <h3>Payment Gateways</h3>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem; margin-bottom: 1rem;">
+                                <div><h4 style="margin-bottom:0.2rem;">Stripe</h4><p style="color: #bbb; font-size: 0.9rem;">Credit card processing</p></div>
+                                <button class="btn btn-outline btn-sm">Connected</button>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <div><h4 style="margin-bottom:0.2rem;">PayPal</h4><p style="color: #bbb; font-size: 0.9rem;">Express checkout</p></div>
+                                <button class="btn btn-dark btn-sm">Connect</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: Shipping & Taxes -->
+                    <div class="card table-card">
+                        <div class="card-header">
+                            <h3>Shipping & Taxes</h3>
+                        </div>
+                        <div style="padding: 1.5rem;">
+                            <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem; margin-bottom: 1rem;">
+                                <div><h4 style="margin-bottom:0.2rem;">Flat Rate Shipping</h4><p style="color: #bbb; font-size: 0.9rem;">$5.00 domestic</p></div>
+                                <button class="btn btn-outline btn-sm">Edit</button>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <div><h4 style="margin-bottom:0.2rem;">Tax Collection</h4><p style="color: #bbb; font-size: 0.9rem;">Enabled for WA State (10%)</p></div>
+                                <button class="btn btn-outline btn-sm">Edit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const links = document.querySelectorAll(".sidebar-nav a");
+        const views = document.querySelectorAll(".dashboard-view");
+
+        links.forEach(link => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute("data-target");
+                if (!targetId) return;
+
+                links.forEach(l => l.classList.remove("active"));
+                link.classList.add("active");
+
+                views.forEach(view => {
+                    if (view.id === targetId) {
+                        view.style.display = "block";
+                    } else {
+                        view.style.display = "none";
+                    }
+                });
+            });
+        });
+    });
+</script>
+<script src="script.js"></script>
+</body>
+</html>

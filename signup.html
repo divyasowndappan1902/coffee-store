@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Coffee Market</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+    
+    <div class="login-container">
+        <!-- Left Side Image -->
+        <div class="login-image-side" style="background-image: url('assets/coffee_splash.webp'); transform: scaleX(-1);">
+            <div class="overlay" style="transform: scaleX(-1);">
+                <div class="quote-box text-right">
+                    <h2>"Join the coffee revolution."</h2>
+                    <p>- Start your journey</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Side Form (Glassmorphism) -->
+        <div class="login-form-side">
+            <div class="login-glass-card">
+                <a href="index.html" class="logo" style="display: flex; align-items: center; justify-content: center; text-decoration: none;">
+                    <img src="assets/logo_0019.webp" alt="Coffee Store Logo" style="height: 50px; width: auto; filter: brightness(0) saturate(100%) invert(80%) sepia(26%) saturate(674%) hue-rotate(345deg) brightness(85%) contrast(85%);">
+                </a>
+                <div style="text-align: center; margin-top: 0.5rem; margin-bottom: 1.5rem;">
+                    <a href="index.html" style="color: var(--accent-color); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--accent-color)'">&larr; Back to Home</a>
+                </div>
+                <h3>Create an account</h3>
+                <p class="subtitle">Sign up to get started.</p>
+
+                <!-- Role Selection -->
+                <div class="role-selector">
+                    <div class="role-slider"></div>
+                    <button type="button" class="role-btn active" data-role="customer">Customer</button>
+                    <button type="button" class="role-btn" data-role="admin">Admin</button>
+                </div>
+
+                <form class="glass-form" id="signupForm">
+                    <input type="hidden" id="selectedRole" value="customer">
+                    
+                    <div class="input-group">
+                        <input type="text" id="fullname" placeholder=" " required>
+                        <label for="fullname">Full Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" placeholder=" " required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address.">
+                        <label for="email">Email Address</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="password" placeholder=" " required minlength="8" title="Password must be at least 8 characters long.">
+                        <label for="password">Password</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="confirm_password" placeholder=" " required minlength="8" title="Please confirm your password.">
+                        <label for="confirm_password">Confirm Password</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-dark full-width">Sign Up</button>
+                </form>
+
+                <p class="signup-link">Already have an account? <a href="login.html">Sign in here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

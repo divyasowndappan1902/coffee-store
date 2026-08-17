@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: var(--bg-light);
+            color: var(--text-color);
+            font-family: var(--font-family);
+            text-align: center;
+        }
+        .error-container {
+            max-width: 500px;
+            padding: 4rem 3rem;
+            background: #ffffff;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        .error-container h1 {
+            font-size: 6rem;
+            margin: 0;
+            color: var(--accent-color);
+            line-height: 1;
+        }
+        .error-container h2 {
+            font-size: 2rem;
+            margin: 1rem 0;
+            color: var(--primary-color);
+        }
+        .error-container p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        .btn-home {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid var(--accent-color);
+        }
+        .btn-home:hover {
+            background: var(--accent-color-hover);
+            border-color: var(--accent-color-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .btn-back {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: transparent;
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1rem;
+            border: 2px solid var(--primary-color);
+            transition: var(--transition);
+        }
+        .btn-back:hover {
+            background: rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <h1>404</h1>
+        <h2>Oops! Page Not Found</h2>
+        <p>The page or feature you are looking for doesn't exist or is still under construction. Don't worry, even the best explorers get lost sometimes!</p>
+        <div class="btn-container">
+            <button onclick="window.history.back()" class="btn-back">Go Back</button>
+            <a href="index.html" class="btn-home">Return to Home</a>
+        </div>
+    </div>
+</body>
+</html>

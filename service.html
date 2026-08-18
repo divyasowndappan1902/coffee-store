@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <title>Services - Coffee Market</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair\+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -130,7 +130,7 @@
         <div class="container text-center">
             <h2>Service <span class="highlight">Inquiry</span></h2>
             <p>Interested in our services? Fill out the form below and we'll be in touch.</p>
-            <form style="max-width: 600px; margin: 2rem auto; text-align: left;">
+            <form style="max-width: 600px; margin: 2rem auto; text-align: left;" onsubmit="event.preventDefault(); window.location.href='404.html';">
                 <input type="text" placeholder="Name" required style="width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 4px;">
                 <input type="email" placeholder="Email" required style="width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 4px;">
                 <select style="width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 4px; font-family: inherit;">
@@ -158,11 +158,11 @@
                     <p style="color: #9ca3af; font-size: 0.85rem; line-height: 1.6; max-width: 250px;">
                         Delivering purity and freshness to your doorstep. Brew better, live healthier.
                     </p>
-                    <div style="display: flex; gap: 0.8rem; margin-top: 0.5rem;">
-                        <a href="404.html" style="display: flex; justify-content: center; align-items: center; width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; color: white; text-decoration: none; transition: background 0.3s;" onmouseover="this.style.background='var(--accent-color)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">f</a>
-                        <a href="404.html" style="display: flex; justify-content: center; align-items: center; width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; color: white; text-decoration: none; transition: background 0.3s;" onmouseover="this.style.background='var(--accent-color)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">t</a>
-                        <a href="404.html" style="display: flex; justify-content: center; align-items: center; width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; color: white; text-decoration: none; transition: background 0.3s;" onmouseover="this.style.background='var(--accent-color)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">ig</a>
-                        <a href="404.html" style="display: flex; justify-content: center; align-items: center; width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; color: white; text-decoration: none; transition: background 0.3s;" onmouseover="this.style.background='var(--accent-color)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">in</a>
+                    <div class="social-icons" style="margin-top: 0.5rem;">
+                        <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="404.html"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
                     </div>
                     <div style="color: #9ca3af; font-size: 0.75rem; margin-top: 2rem;">
                         &copy; 2026 Coffee Store.<br>All Rights Reserved.
@@ -214,3 +214,6 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+
+

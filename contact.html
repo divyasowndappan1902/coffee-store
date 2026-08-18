@@ -6,7 +6,7 @@
     <title>Contact - Coffee Market</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair\+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -53,14 +53,14 @@
                     <strong>Email:</strong> hello@coffeestore.com
                 </div>
                 <div style="margin-bottom: 1rem;">
-                    <strong>Phone:</strong> +1 (555) 123-4567
+                    <strong>Phone:</strong>  (987) 123-4567
                 </div>
                 <div style="margin-bottom: 1rem;">
                     <strong>Support Hours:</strong> Mon-Fri 9am - 5pm EST
                 </div>
             </div>
             <div style="flex: 1; padding: 2rem; background: var(--bg-color); box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-radius: 8px;">
-                <form>
+                <form onsubmit="event.preventDefault(); window.location.href='404.html';">
                     <input type="text" placeholder="Your Name" required style="width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 4px;">
                     <input type="email" placeholder="Your Email" required style="width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 4px;">
                     <input type="text" placeholder="Subject" required style="width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid #ddd; border-radius: 4px;">
@@ -119,15 +119,36 @@
     <section data-aos="fade-up" class="section bg-light" style="padding-top: 0;">
         <div class="container">
             <h2 class="text-center" style="color: var(--primary-color); margin-bottom: 3rem;">Frequently Asked Questions</h2>
-            <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
-                <div data-aos="zoom-in" class="card" style="border: 1px solid #eaeaea; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); padding: 2rem; background: white; text-align: left;">
-                    <h4 style="margin-bottom: 0.5rem; color: #222; font-size: 1.2rem;">Do you offer vegan options?</h4>
-                    <p style="color: #666; margin: 0;">Yes, we have oat, almond, and soy milk available, plus vegan pastries.</p>
-                </div>
-                <div data-aos="zoom-in" class="card" style="border: 1px solid #eaeaea; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); padding: 2rem; background: white; text-align: left;">
-                    <h4 style="margin-bottom: 0.5rem; color: #222; font-size: 1.2rem;">Do you ship internationally?</h4>
-                    <p style="color: #666; margin: 0;">Currently, we only ship coffee beans within the US and Canada.</p>
-                </div>
+            <div class="faq-accordion" data-aos="fade-up">
+                <details class="faq-item">
+                    <summary class="faq-summary">
+                        Do you offer vegan options?
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </summary>
+                    <div class="faq-content">
+                        Yes, we have oat, almond, and soy milk available, plus a variety of delicious vegan pastries baked fresh daily.
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-summary">
+                        Do you ship internationally?
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </summary>
+                    <div class="faq-content">
+                        Currently, we only ship our premium roasted coffee beans within the US and Canada to ensure maximum freshness upon arrival.
+                    </div>
+                </details>
+                
+                <details class="faq-item">
+                    <summary class="faq-summary">
+                        Where do you source your coffee beans?
+                        <i class="fa-solid fa-chevron-down faq-icon"></i>
+                    </summary>
+                    <div class="faq-content">
+                        We partner directly with sustainable, fair-trade farms across Colombia, Costa Rica, Ethiopia, and Guatemala to ensure the highest quality beans.
+                    </div>
+                </details>
             </div>
         </div>
     </section>
@@ -146,11 +167,11 @@
                     <p style="color: #9ca3af; font-size: 0.85rem; line-height: 1.6; max-width: 250px;">
                         Delivering purity and freshness to your doorstep. Brew better, live healthier.
                     </p>
-                    <div style="display: flex; gap: 0.8rem; margin-top: 0.5rem;">
-                        <a href="404.html" style="display: flex; justify-content: center; align-items: center; width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; color: white; text-decoration: none; transition: background 0.3s;" onmouseover="this.style.background='var(--accent-color)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">f</a>
-                        <a href="404.html" style="display: flex; justify-content: center; align-items: center; width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; color: white; text-decoration: none; transition: background 0.3s;" onmouseover="this.style.background='var(--accent-color)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">t</a>
-                        <a href="404.html" style="display: flex; justify-content: center; align-items: center; width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; color: white; text-decoration: none; transition: background 0.3s;" onmouseover="this.style.background='var(--accent-color)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">ig</a>
-                        <a href="404.html" style="display: flex; justify-content: center; align-items: center; width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; color: white; text-decoration: none; transition: background 0.3s;" onmouseover="this.style.background='var(--accent-color)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">in</a>
+                    <div class="social-icons" style="margin-top: 0.5rem;">
+                        <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="404.html"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
                     </div>
                     <div style="color: #9ca3af; font-size: 0.75rem; margin-top: 2rem;">
                         &copy; 2026 Coffee Store.<br>All Rights Reserved.
@@ -202,3 +223,6 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+
+

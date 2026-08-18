@@ -158,9 +158,10 @@ if (dashboardHamburger && sidebar) {
 document.addEventListener('DOMContentLoaded', () => {
     if (typeof AOS !== 'undefined') {
         AOS.init({
-            duration: 800,
+            duration: 1000,
+            easing: 'ease-out-cubic',
             once: true,
-            offset: 100,
+            offset: 50,
         });
     }
 });

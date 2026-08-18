@@ -6,7 +6,7 @@
     <title>Coffee Market - Online Store</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair\+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -45,15 +45,7 @@
                 <a href="404.html" class="btn btn-light">View products</a>
             </div>
         </div>
-        <div class="hero-image" data-aos="fade-left" data-aos-delay="200">
-            <img src="assets/coffee_splash.webp" alt="Coffee Splash">
-        </div>
-        <!-- Hero Pagination elements -->
-        <div class="pagination hero-pagination">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
+
     </section>
 
     <!-- 2. Featured Products -->
@@ -145,15 +137,17 @@
                 <h2>What <span class="highlight">They Say</span></h2>
             </div>
             <div class="testimonial-slider">
-                <div class="testimonial">
+                <div class="testimonial" data-aos="zoom-in">
                     <p>"The best coffee in town. Period. The atmosphere is amazing and the baristas know their stuff."</p>
-                    <h5>- Sarah J.</h5>
+                    <div class="testimonial-author">
+                        <img src="assets/jane_doe.webp" alt="Sarah J.">
+                        <h5>Sarah J.</h5>
+                        <div style="color: #f1c40f; font-size: 0.9rem; margin-left: auto;">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
                 </div>
-                <!-- Pagination for slider -->
-                <div class="pagination">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                </div>
+
             </div>
         </div>
     </section>
@@ -192,23 +186,36 @@
                 <h2>Photo <span class="highlight">Gallery</span></h2>
             </div>
             <div class="gallery-grid">
-                <img src="assets/coffee_beans_gallery.webp" alt="Coffee Beans" class="gallery-item" style="object-fit: cover; width: 100%;">
-                <img src="assets/pastries.webp" alt="Pastries" class="gallery-item" style="object-fit: cover; width: 100%;">
-                <img src="assets/barista_pouring.webp" alt="Barista Pouring Latte Art" class="gallery-item" style="object-fit: cover; width: 100%;">
-                <img src="assets/cold_brew.webp" alt="Cold Brew Coffee" class="gallery-item" style="object-fit: cover; width: 100%;">
-                <img src="assets/coffee_machine.webp" alt="Espresso Machine" class="gallery-item" style="object-fit: cover; width: 100%;">
-                <img src="assets/cafe_patrons.webp" alt="Cafe Patrons" class="gallery-item" style="object-fit: cover; width: 100%;">
+                <div class="gallery-wrap" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/coffee_beans_gallery.webp" alt="Coffee Beans" class="gallery-item">
+                </div>
+                <div class="gallery-wrap" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/pastries.webp" alt="Pastries" class="gallery-item">
+                </div>
+                <div class="gallery-wrap" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/barista_pouring.webp" alt="Barista Pouring Latte Art" class="gallery-item">
+                </div>
+                <div class="gallery-wrap" data-aos="fade-up" data-aos-delay="400">
+                    <img src="assets/cold_brew.webp" alt="Cold Brew Coffee" class="gallery-item">
+                </div>
+                <div class="gallery-wrap" data-aos="fade-up" data-aos-delay="500">
+                    <img src="assets/coffee_machine.webp" alt="Espresso Machine" class="gallery-item">
+                </div>
+                <div class="gallery-wrap" data-aos="fade-up" data-aos-delay="600">
+                    <img src="assets/cafe_patrons.webp" alt="Cafe Patrons" class="gallery-item">
+                </div>
             </div>
         </div>
     </section>
 
     <!-- 8. Special Offers -->
-    <section class="section bg-accent text-white" id="offers">
-        <div class="container text-center" data-aos="zoom-in">
-            <h2 style="color: white;">Special Offer!</h2>
-            <p>Get 20% off your first bag of beans when you buy online.</p>
-            <br>
-            <a href="404.html" class="btn btn-dark">Shop Now</a>
+    <section class="section bg-accent text-white" id="offers" style="position: relative; overflow: hidden; background: linear-gradient(135deg, var(--primary-color), var(--accent-color));">
+        <!-- Floating decorative bean -->
+        <div style="position: absolute; top: -50px; right: -50px; opacity: 0.1; font-size: 15rem; transform: rotate(30deg);"><i class="fa-solid fa-mug-hot"></i></div>
+        <div class="container text-center" data-aos="zoom-in" style="position: relative; z-index: 1;">
+            <h2 style="color: white; font-size: 3.5rem; margin-bottom: 1rem;">Special Offer!</h2>
+            <p style="font-size: 1.25rem; margin-bottom: 2rem;">Get 20% off your first bag of beans when you buy online.</p>
+            <a href="404.html" class="btn btn-dark" style="background: white; color: var(--primary-color);">Shop Now</a>
         </div>
     </section>
 
@@ -257,11 +264,11 @@
             </div>
             <div class="split-text location-info">
                 <h2>Visit <span class="highlight">Us</span></h2>
-                <p><strong>Address:</strong> 123 Espresso Lane, Coffeeville, CV 90210</p>
+                <p><strong>Address:</strong> MMR Complex, Salem, TN 636008</p>
                 <p><strong>Hours:</strong><br>
                 Mon-Fri: 7am - 7pm<br>
                 Sat-Sun: 8am - 6pm</p>
-                <p><strong>Phone:</strong> (555) 123-4567</p>
+                <p><strong>Phone:</strong> (987) 123-4567</p>
             </div>
         </div>
     </section>
@@ -279,11 +286,11 @@
                     <p style="color: #9ca3af; font-size: 0.85rem; line-height: 1.6; max-width: 250px;">
                         Delivering purity and freshness to your doorstep. Brew better, live healthier.
                     </p>
-                    <div style="display: flex; gap: 0.8rem; margin-top: 0.5rem;">
-                        <a href="404.html" style="display: flex; justify-content: center; align-items: center; width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; color: white; text-decoration: none; transition: background 0.3s;" onmouseover="this.style.background='var(--accent-color)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">f</a>
-                        <a href="404.html" style="display: flex; justify-content: center; align-items: center; width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; color: white; text-decoration: none; transition: background 0.3s;" onmouseover="this.style.background='var(--accent-color)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">t</a>
-                        <a href="404.html" style="display: flex; justify-content: center; align-items: center; width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; color: white; text-decoration: none; transition: background 0.3s;" onmouseover="this.style.background='var(--accent-color)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">ig</a>
-                        <a href="404.html" style="display: flex; justify-content: center; align-items: center; width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; color: white; text-decoration: none; transition: background 0.3s;" onmouseover="this.style.background='var(--accent-color)'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">in</a>
+                    <div class="social-icons" style="margin-top: 0.5rem;">
+                        <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="404.html"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
                     </div>
                     <div style="color: #9ca3af; font-size: 0.75rem; margin-top: 2rem;">
                         &copy; 2026 Coffee Store.<br>All Rights Reserved.
@@ -335,3 +342,6 @@
     <script src="script.js"></script>
 </body>
 </html>
+
+
+

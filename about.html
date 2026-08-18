@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header class="navbar">
@@ -34,7 +36,7 @@
     </header>
 
     <!-- 1. Page Header -->
-    <section class="page-header bg-dark text-white">
+    <section data-aos="fade-up" class="page-header bg-dark text-white">
         <div class="container text-center">
             <h1 style="color: white; font-size: 3rem;">About <span class="highlight">Us</span></h1>
             <p>Brewing passion since 2010.</p>
@@ -42,10 +44,10 @@
     </section>
 
     <!-- 2. Our Story -->
-    <section class="section">
+    <section data-aos="fade-up" class="section">
         <div class="container split-section">
-            <img src="assets/founders.webp" alt="Founders" class="split-image" style="object-fit: cover; border-radius: 8px;">
-            <div class="split-text">
+            <img src="assets/founders.webp" alt="Founders" class="split-image" data-aos="fade-left" style="object-fit: cover; border-radius: 8px;">
+            <div data-aos="fade-right" class="split-text">
                 <h2>Our <span class="highlight">Story</span></h2>
                 <p>What started as a small cart in the downtown market has grown into a community staple. We believe that coffee is more than just a drink; it's an experience, a ritual, and a way to connect.</p>
             </div>
@@ -53,21 +55,21 @@
     </section>
 
     <!-- 3. Mission & Values -->
-    <section class="section bg-light text-center">
+    <section data-aos="fade-up" class="section bg-light text-center">
         <div class="container">
-            <div class="section-title">
+            <div data-aos="fade-up" class="section-title">
                 <h2>Mission & <span class="highlight">Values</span></h2>
             </div>
             <div class="grid-3">
-                <div class="card">
+                <div data-aos="zoom-in" class="card">
                     <h4>Quality</h4>
                     <p>Never compromising on the bean.</p>
                 </div>
-                <div class="card">
+                <div data-aos="zoom-in" class="card">
                     <h4>Community</h4>
                     <p>A welcoming space for everyone.</p>
                 </div>
-                <div class="card">
+                <div data-aos="zoom-in" class="card">
                     <h4>Integrity</h4>
                     <p>Honest sourcing and pricing.</p>
                 </div>
@@ -76,23 +78,23 @@
     </section>
 
     <!-- 4. Meet the Team -->
-    <section class="section">
+    <section data-aos="fade-up" class="section">
         <div class="container">
-            <div class="section-title">
+            <div data-aos="fade-up" class="section-title">
                 <h2>Meet the <span class="highlight">Team</span></h2>
             </div>
             <div class="grid-3">
-                <div class="card text-center">
+                <div data-aos="zoom-in" class="card text-center">
                     <img src="assets/jane_doe.webp" alt="Jane Doe" class="team-img" style="border-radius: 50%; height: 150px; width: 150px; object-fit: cover; margin: 0 auto; display: block;">
                     <h4 class="mt-2">Jane Doe</h4>
                     <p>Master Roaster</p>
                 </div>
-                <div class="card text-center">
+                <div data-aos="zoom-in" class="card text-center">
                     <img src="assets/john_smith.webp" alt="John Smith" class="team-img" style="border-radius: 50%; height: 150px; width: 150px; object-fit: cover; margin: 0 auto; display: block;">
                     <h4 class="mt-2">John Smith</h4>
                     <p>Lead Barista</p>
                 </div>
-                <div class="card text-center">
+                <div data-aos="zoom-in" class="card text-center">
                     <img src="assets/emily_chen.webp" alt="Emily Chen" class="team-img" style="border-radius: 50%; height: 150px; width: 150px; object-fit: cover; margin: 0 auto; display: block;">
                     <h4 class="mt-2">Emily Chen</h4>
                     <p>Store Manager</p>
@@ -102,7 +104,7 @@
     </section>
 
     <!-- 5. Our Roastery -->
-    <section class="section bg-dark text-white">
+    <section data-aos="fade-up" class="section bg-dark text-white">
         <div class="container text-center">
             <h2 style="color: white;">Our <span class="highlight">Roastery</span></h2>
             <p style="max-width: 600px; margin: 0 auto;">Located just a few miles away, our custom-built roastery allows us to maintain strict quality control over every batch, ensuring freshness hits your cup every single time.</p>
@@ -110,18 +112,18 @@
     </section>
 
     <!-- 6. Sustainability -->
-    <section class="section bg-light">
+    <section data-aos="fade-up" class="section bg-light">
         <div class="container split-section">
-            <div class="split-text">
+            <div data-aos="fade-right" class="split-text">
                 <h2>Focus on <span class="highlight">Sustainability</span></h2>
                 <p>From compostable cups to zero-waste roasting techniques, we are dedicated to protecting the environment.</p>
             </div>
-            <img src="assets/eco_leaf.webp" alt="Eco Sustainability" class="split-image" style="object-fit: cover; border-radius: 8px;">
+            <img src="assets/eco_leaf.webp" alt="Eco Sustainability" class="split-image" data-aos="fade-left" style="object-fit: cover; border-radius: 8px;">
         </div>
     </section>
 
     <!-- 7. Coffee Sourcing -->
-    <section class="section">
+    <section data-aos="fade-up" class="section">
         <div class="container text-center">
             <h2>Ethical <span class="highlight">Sourcing</span></h2>
             <p style="max-width: 700px; margin: 0 auto;">We work directly with farmers in Colombia, Ethiopia, and Guatemala to ensure fair wages and excellent growing conditions.</p>
@@ -129,7 +131,7 @@
     </section>
 
     <!-- 8. Awards & Recognition -->
-    <section class="section bg-accent text-white">
+    <section data-aos="fade-up" class="section bg-accent text-white">
         <div class="container text-center">
             <h2 style="color: white;">Award Winning <span style="color: var(--primary-color);">Coffee</span></h2>
             <p>Voted Best Local Coffee Shop 2024 & 2025.</p>
@@ -137,9 +139,9 @@
     </section>
 
     <!-- 9. FAQ -->
-    <section class="section bg-light">
+    <section data-aos="fade-up" class="section bg-light">
         <div class="container">
-            <div class="section-title">
+            <div data-aos="fade-up" class="section-title">
                 <h2>Frequently Asked <span class="highlight">Questions</span></h2>
             </div>
             <div class="faq-list" style="max-width: 800px; margin: 0 auto;">
@@ -219,6 +221,8 @@
         </div>
     </footer>
 
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

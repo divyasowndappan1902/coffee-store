@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header class="navbar">
@@ -35,7 +37,7 @@
 
     <!-- 1. Hero Section -->
     <section class="hero-section" id="home">
-        <div class="hero-content">
+        <div class="hero-content" data-aos="fade-right">
             <h1>Coffee market<br><span class="highlight">online store</span></h1>
             <p>Sed sagittis sodales lobortis. Curabitur in eleifend turpis, id vehicula odio. Donec pulvinar tellus eget magna aliquet ultricies.</p>
             <div class="cta-buttons">
@@ -43,7 +45,7 @@
                 <a href="404.html" class="btn btn-light">View products</a>
             </div>
         </div>
-        <div class="hero-image">
+        <div class="hero-image" data-aos="fade-left" data-aos-delay="200">
             <img src="assets/coffee_splash.webp" alt="Coffee Splash">
         </div>
         <!-- Hero Pagination elements -->
@@ -57,24 +59,24 @@
     <!-- 2. Featured Products -->
     <section class="section bg-light" id="products">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title" data-aos="fade-up">
                 <h2>Featured <span class="highlight">Products</span></h2>
                 <p>Discover our top-rated blends handpicked for you.</p>
             </div>
             <div class="grid-3">
-                <div class="card product-card">
+                <div class="card product-card" data-aos="fade-up" data-aos-delay="100">
                     <img src="assets/yirgacheffe.webp" alt="Ethiopian Yirgacheffe" class="card-img-placeholder" style="object-fit: cover;">
                     <h3>Ethiopian Yirgacheffe</h3>
                     <p class="price">$18.00</p>
                     <a href="404.html" class="btn btn-outline">Add to Cart</a>
                 </div>
-                <div class="card product-card">
+                <div class="card product-card" data-aos="fade-up" data-aos-delay="200">
                     <img src="assets/colombian.webp" alt="Colombian Supremo" class="card-img-placeholder" style="object-fit: cover;">
                     <h3>Colombian Supremo</h3>
                     <p class="price">$16.50</p>
                     <a href="404.html" class="btn btn-outline">Add to Cart</a>
                 </div>
-                <div class="card product-card">
+                <div class="card product-card" data-aos="fade-up" data-aos-delay="300">
                     <img src="assets/espresso.webp" alt="Signature Espresso" class="card-img-placeholder" style="object-fit: cover;">
                     <h3>Signature Espresso</h3>
                     <p class="price">$19.00</p>
@@ -87,12 +89,12 @@
     <!-- 3. About Our Coffee -->
     <section class="section" id="about">
         <div class="container split-section">
-            <div class="split-text">
+            <div class="split-text" data-aos="fade-right">
                 <h2>About <span class="highlight">Our Coffee</span></h2>
                 <p>We source only the finest arabica beans from sustainable farms worldwide. Every batch is carefully roasted to unlock its unique flavor profile, ensuring a perfect cup every time.</p>
                 <a href="404.html" class="btn btn-dark">Learn Our Story</a>
             </div>
-            <img src="assets/roasting.webp" alt="Roasting Process" class="split-image" style="object-fit: cover; border-radius: 8px;">
+            <img src="assets/roasting.webp" alt="Roasting Process" class="split-image" data-aos="fade-left" data-aos-delay="200" style="object-fit: cover; border-radius: 8px;">
         </div>
     </section>
 
@@ -139,7 +141,7 @@
     <!-- 5. Customer Testimonials -->
     <section class="section" id="testimonials">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title" data-aos="fade-up">
                 <h2>What <span class="highlight">They Say</span></h2>
             </div>
             <div class="testimonial-slider">
@@ -159,22 +161,22 @@
     <!-- 6. Our Process -->
     <section class="section bg-dark text-white" id="process">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title" data-aos="fade-up">
                 <h2 style="color: white;">Bean to <span class="highlight">Cup</span></h2>
                 <p>The journey of our coffee.</p>
             </div>
             <div class="process-steps">
-                <div class="step">
+                <div class="step" data-aos="fade-up" data-aos-delay="100">
                     <div class="step-icon">1</div>
                     <h4>Sourcing</h4>
                     <p>Ethically sourced from local farmers.</p>
                 </div>
-                <div class="step">
+                <div class="step" data-aos="fade-up" data-aos-delay="200">
                     <div class="step-icon">2</div>
                     <h4>Roasting</h4>
                     <p>Small batches roasted to perfection.</p>
                 </div>
-                <div class="step">
+                <div class="step" data-aos="fade-up" data-aos-delay="300">
                     <div class="step-icon">3</div>
                     <h4>Brewing</h4>
                     <p>Expertly brewed by our master baristas.</p>
@@ -202,7 +204,7 @@
 
     <!-- 8. Special Offers -->
     <section class="section bg-accent text-white" id="offers">
-        <div class="container text-center">
+        <div class="container text-center" data-aos="zoom-in">
             <h2 style="color: white;">Special Offer!</h2>
             <p>Get 20% off your first bag of beans when you buy online.</p>
             <br>
@@ -328,6 +330,8 @@
         </div>
     </footer>
 
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

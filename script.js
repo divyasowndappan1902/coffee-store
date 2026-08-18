@@ -141,4 +141,26 @@ if (dashboardHamburger && sidebar) {
             dashboardHamburger.classList.remove('active');
         }
     });
+
+    // Close sidebar when clicking a nav link on mobile
+    const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                sidebar.classList.remove('active');
+                dashboardHamburger.classList.remove('active');
+            }
+        });
+    });
 }
+
+// Initialize AOS Animation
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100,
+        });
+    }
+});

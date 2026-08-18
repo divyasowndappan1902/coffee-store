@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header class="navbar">
@@ -34,7 +36,7 @@
     </header>
 
     <!-- 1. Page Header -->
-    <section class="page-header" style="background-color: transparent; color: var(--text-color); padding: 4rem 0;">
+    <section data-aos="fade-up" class="page-header" style="background-color: transparent; color: var(--text-color); padding: 4rem 0;">
         <div class="container text-center">
             <h1 style="font-size: 3rem; color: var(--primary-color);">The Coffee Journal</h1>
             <p style="margin-top: 1rem;">Insights, guides, and stories from the coffee world.</p>
@@ -42,7 +44,7 @@
     </section>
 
     <!-- 2. Featured Article -->
-    <section class="section" style="padding-top: 0;">
+    <section data-aos="fade-up" class="section" style="padding-top: 0;">
         <div class="container">
             <div style="position: relative; border-radius: 12px; overflow: hidden; min-height: 400px; display: flex; align-items: flex-end;">
                 <img src="assets/evolution_espresso.webp" alt="Featured Post" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
@@ -56,31 +58,31 @@
     </section>
 
     <!-- 3. Latest Posts -->
-    <section class="section bg-light">
+    <section data-aos="fade-up" class="section bg-light">
         <div class="container">
             <div class="section-title text-center">
                 <h2 style="color: var(--primary-color);">Latest Posts</h2>
             </div>
             <div class="grid-3">
-                <div class="card blog-card" style="border-radius: 8px; overflow: hidden; background: white; border: 1px solid #eaeaea;">
+                <div data-aos="zoom-in" class="card blog-card" style="border-radius: 8px; overflow: hidden; background: white; border: 1px solid #eaeaea;">
                     <img src="assets/understanding_roast.webp" alt="Understanding Roast Levels" style="width: 100%; height: 220px; object-fit: cover;">
-                    <div class="card-content" style="padding: 1.5rem;">
+                    <div data-aos="zoom-in" class="card-content" style="padding: 1.5rem;">
                         <h4 style="margin-bottom: 0.5rem;">Understanding Roast Levels</h4>
                         <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Light vs Medium vs Dark explained.</p>
                         <a href="404.html" class="btn btn-outline-accent read-more">Read More <i class="fa-solid fa-arrow-right" style="margin-left: 0.3rem;"></i></a>
                     </div>
                 </div>
-                <div class="card blog-card" style="border-radius: 8px; overflow: hidden; background: white; border: 1px solid #eaeaea;">
+                <div data-aos="zoom-in" class="card blog-card" style="border-radius: 8px; overflow: hidden; background: white; border: 1px solid #eaeaea;">
                     <img src="assets/french_press.webp" alt="Water Chemistry 101" style="width: 100%; height: 220px; object-fit: cover;">
-                    <div class="card-content" style="padding: 1.5rem;">
+                    <div data-aos="zoom-in" class="card-content" style="padding: 1.5rem;">
                         <h4 style="margin-bottom: 0.5rem;">Water Chemistry 101</h4>
                         <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Why your tap water might be ruining your brew.</p>
                         <a href="404.html" class="btn btn-outline-accent read-more">Read More <i class="fa-solid fa-arrow-right" style="margin-left: 0.3rem;"></i></a>
                     </div>
                 </div>
-                <div class="card blog-card" style="border-radius: 8px; overflow: hidden; background: white; border: 1px solid #eaeaea;">
+                <div data-aos="zoom-in" class="card blog-card" style="border-radius: 8px; overflow: hidden; background: white; border: 1px solid #eaeaea;">
                     <img src="assets/espresso.webp" alt="Latte Art Basics" style="width: 100%; height: 220px; object-fit: cover;">
-                    <div class="card-content" style="padding: 1.5rem;">
+                    <div data-aos="zoom-in" class="card-content" style="padding: 1.5rem;">
                         <h4 style="margin-bottom: 0.5rem;">Latte Art Basics</h4>
                         <p style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">How to pour a perfect heart.</p>
                         <a href="404.html" class="btn btn-outline-accent read-more">Read More <i class="fa-solid fa-arrow-right" style="margin-left: 0.3rem;"></i></a>
@@ -91,7 +93,7 @@
     </section>
 
     <!-- 4. Coffee Origins -->
-    <section class="section">
+    <section data-aos="fade-up" class="section">
         <div class="container">
             <div style="display: flex; gap: 4rem; align-items: center; flex-wrap: wrap;">
                 <div style="flex: 1; min-width: 300px;">
@@ -108,7 +110,7 @@
     </section>
 
     <!-- 5. Brewing Guide -->
-    <section class="section bg-light">
+    <section data-aos="fade-up" class="section bg-light">
         <div class="container">
             <div class="section-title text-center">
                 <span style="color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Technique</span>
@@ -136,7 +138,7 @@
     </section>
 
     <!-- 6. Author Spotlight -->
-    <section class="section">
+    <section data-aos="fade-up" class="section">
         <div class="container text-center">
             <h2>Meet the <span class="highlight">Author</span></h2>
             <img src="assets/david_beans.webp" alt="David Beans" class="team-img" style="border-radius: 50%; height: 120px; width: 120px; margin: 1.5rem auto; object-fit: cover; display: block;">
@@ -146,7 +148,7 @@
     </section>
 
     <!-- 7. Video Content -->
-    <section class="section bg-dark text-white text-center">
+    <section data-aos="fade-up" class="section bg-dark text-white text-center">
         <div class="container">
             <h2 style="color: white;">Watch & <span class="highlight">Learn</span></h2>
             <div onclick="window.location.href='404.html'" class="placeholder-img" style="cursor: pointer; position: relative; height: 400px; max-width: 700px; margin: 2rem auto; border-radius: 8px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #1a1a1a;">
@@ -158,7 +160,7 @@
 
 
     <!-- 9. Community Spotlight -->
-    <section class="section">
+    <section data-aos="fade-up" class="section">
         <div class="container text-center">
             <h2>Community <span class="highlight">Spotlight</span></h2>
             <p>Share your coffee moments with #CoffeeStore on Instagram to be featured here!</p>
@@ -234,6 +236,8 @@
         </div>
     </footer>
 
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

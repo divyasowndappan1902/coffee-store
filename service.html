@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header class="navbar">
@@ -34,7 +36,7 @@
     </header>
 
     <!-- 1. Page Header -->
-    <section class="page-header bg-dark text-white">
+    <section data-aos="fade-up" class="page-header bg-dark text-white">
         <div class="container text-center">
             <h1 style="color: white; font-size: 3rem;">Our <span class="highlight">Services</span></h1>
             <p>More than just a cup of coffee.</p>
@@ -42,18 +44,18 @@
     </section>
 
     <!-- 2. Coffee Catering -->
-    <section class="section">
+    <section data-aos="fade-up" class="section">
         <div class="container split-section">
-            <div class="split-text">
+            <div data-aos="fade-right" class="split-text">
                 <h2>Coffee <span class="highlight">Catering</span></h2>
                 <p>Let us bring the cafe experience to your next event. We provide fully equipped espresso carts and professional baristas for weddings, corporate events, and parties.</p>
             </div>
-            <img src="assets/espresso_cart.webp" alt="Espresso Cart Image" class="split-image" style="object-fit: cover; border-radius: 8px;">
+            <img src="assets/espresso_cart.webp" alt="Espresso Cart Image" class="split-image" data-aos="fade-left" style="object-fit: cover; border-radius: 8px;">
         </div>
     </section>
 
     <!-- 3. Barista Training -->
-    <section class="section bg-light text-center">
+    <section data-aos="fade-up" class="section bg-light text-center">
         <div class="container">
             <h2>Barista <span class="highlight">Training</span></h2>
             <p style="max-width: 600px; margin: 0 auto 2rem;">From beginners to seasoned pros, our SCA-certified trainers offer courses in espresso dialing, milk texturing, and latte art.</p>
@@ -62,10 +64,10 @@
     </section>
 
     <!-- 4. Wholesale Supply -->
-    <section class="section">
+    <section data-aos="fade-up" class="section">
         <div class="container split-section">
-            <img src="assets/coffee_bags.webp" alt="Coffee Bags Image" class="split-image" style="object-fit: cover; border-radius: 8px;">
-            <div class="split-text">
+            <img src="assets/coffee_bags.webp" alt="Coffee Bags Image" class="split-image" data-aos="fade-left" style="object-fit: cover; border-radius: 8px;">
+            <div data-aos="fade-right" class="split-text">
                 <h2>Wholesale <span class="highlight">Supply</span></h2>
                 <p>Partner with us to serve our premium roasted beans at your cafe, restaurant, or office. We offer competitive pricing and bulk delivery options.</p>
             </div>
@@ -73,22 +75,22 @@
     </section>
 
     <!-- 5. Ordering & Delivery -->
-    <section class="section bg-light">
+    <section data-aos="fade-up" class="section bg-light">
         <div class="container split-section">
-            <div class="split-text">
+            <div data-aos="fade-right" class="split-text">
                 <h2>Ordering & <span class="highlight">Delivery</span></h2>
                 <p>Enjoy our freshly roasted beans without leaving your home. We offer seamless online ordering and fast local delivery, ensuring your coffee arrives at peak freshness. Ask about our weekly and monthly subscription boxes!</p>
                 <a href="404.html" class="btn btn-dark" style="margin-top: 1rem;">Order Now</a>
             </div>
-            <img src="assets/roasting.webp" alt="Coffee Delivery" class="split-image" style="object-fit: cover; border-radius: 8px;">
+            <img src="assets/roasting.webp" alt="Coffee Delivery" class="split-image" data-aos="fade-left" style="object-fit: cover; border-radius: 8px;">
         </div>
     </section>
 
     <!-- 6. Gifts & Merchandise -->
-    <section class="section">
+    <section data-aos="fade-up" class="section">
         <div class="container split-section">
-            <img src="assets/coffee_art.webp" alt="Coffee Gifts" class="split-image" style="object-fit: cover; border-radius: 8px;">
-            <div class="split-text">
+            <img src="assets/coffee_art.webp" alt="Coffee Gifts" class="split-image" data-aos="fade-left" style="object-fit: cover; border-radius: 8px;">
+            <div data-aos="fade-right" class="split-text">
                 <h2>Gifts & <span class="highlight">Merchandise</span></h2>
                 <p>Looking for the perfect gift for a coffee lover? From curated brew kits and elegant ceramic mugs to digital gift cards, we have everything you need to share the joy of exceptional coffee.</p>
                 <a href="404.html" class="btn btn-dark" style="margin-top: 1rem;">Shop Gifts</a>
@@ -97,7 +99,7 @@
     </section>
 
     <!-- In-Store Menu -->
-    <section class="section bg-light">
+    <section data-aos="fade-up" class="section bg-light">
         <div class="container">
             <h2 class="text-center" style="color: var(--primary-color); margin-bottom: 3rem;">In-Store Menu</h2>
             <div style="display: flex; justify-content: space-around; max-width: 800px; margin: 0 auto; flex-wrap: wrap; gap: 2rem;">
@@ -124,7 +126,7 @@
     </section>
 
     <!-- 9. Service Inquiry Form -->
-    <section class="section bg-light" id="inquiry">
+    <section data-aos="fade-up" class="section bg-light" id="inquiry">
         <div class="container text-center">
             <h2>Service <span class="highlight">Inquiry</span></h2>
             <p>Interested in our services? Fill out the form below and we'll be in touch.</p>
@@ -207,6 +209,8 @@
         </div>
     </footer>
 
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

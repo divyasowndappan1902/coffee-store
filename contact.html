@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header class="navbar">
@@ -34,7 +36,7 @@
     </header>
 
     <!-- 1. Page Header -->
-    <section class="page-header bg-dark text-white">
+    <section data-aos="fade-up" class="page-header bg-dark text-white">
         <div class="container text-center">
             <h1 style="color: white; font-size: 3rem;">Get In <span class="highlight">Touch</span></h1>
             <p>We'd love to hear from you.</p>
@@ -42,9 +44,9 @@
     </section>
 
     <!-- 2 & 3. Contact Form & Details -->
-    <section class="section">
+    <section data-aos="fade-up" class="section">
         <div class="container split-section">
-            <div class="split-text">
+            <div data-aos="fade-right" class="split-text">
                 <h2>Contact <span class="highlight">Information</span></h2>
                 <p style="margin-bottom: 2rem;">Reach out for general inquiries, wholesale requests, or just to say hello.</p>
                 <div style="margin-bottom: 1rem;">
@@ -70,16 +72,16 @@
     </section>
 
     <!-- 4 & 5. Store Locations -->
-    <section class="section bg-light text-center">
+    <section data-aos="fade-up" class="section bg-light text-center">
         <div class="container">
             <h2>Our <span class="highlight">Locations</span></h2>
             <div class="grid-2 mt-2">
-                <div class="card">
+                <div data-aos="zoom-in" class="card">
                     <h4>Downtown Roastery</h4>
                     <p>123 Main St, Cityville, ST 12345</p>
                     <p>Open 6am - 8pm Daily</p>
                 </div>
-                <div class="card">
+                <div data-aos="zoom-in" class="card">
                     <h4>Uptown Cafe</h4>
                     <p>456 Oak Ave, Cityville, ST 12345</p>
                     <p>Open 7am - 7pm Daily</p>
@@ -89,7 +91,7 @@
     </section>
 
     <!-- 6. Social Media Hub -->
-    <section class="section bg-dark text-white text-center">
+    <section data-aos="fade-up" class="section bg-dark text-white text-center">
         <div class="container">
             <h2 style="color: white;">Follow <span class="highlight">Us</span></h2>
             <p>Join our community online.</p>
@@ -102,7 +104,7 @@
     </section>
 
     <!-- Hours of Operation -->
-    <section class="section bg-light text-center">
+    <section data-aos="fade-up" class="section bg-light text-center">
         <div class="container">
             <h2 style="color: var(--primary-color); margin-bottom: 2rem;">Hours of Operation</h2>
             <div style="color: #999; line-height: 2;">
@@ -114,15 +116,15 @@
     </section>
 
     <!-- Frequently Asked Questions -->
-    <section class="section bg-light" style="padding-top: 0;">
+    <section data-aos="fade-up" class="section bg-light" style="padding-top: 0;">
         <div class="container">
             <h2 class="text-center" style="color: var(--primary-color); margin-bottom: 3rem;">Frequently Asked Questions</h2>
             <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
-                <div class="card" style="border: 1px solid #eaeaea; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); padding: 2rem; background: white; text-align: left;">
+                <div data-aos="zoom-in" class="card" style="border: 1px solid #eaeaea; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); padding: 2rem; background: white; text-align: left;">
                     <h4 style="margin-bottom: 0.5rem; color: #222; font-size: 1.2rem;">Do you offer vegan options?</h4>
                     <p style="color: #666; margin: 0;">Yes, we have oat, almond, and soy milk available, plus vegan pastries.</p>
                 </div>
-                <div class="card" style="border: 1px solid #eaeaea; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); padding: 2rem; background: white; text-align: left;">
+                <div data-aos="zoom-in" class="card" style="border: 1px solid #eaeaea; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); padding: 2rem; background: white; text-align: left;">
                     <h4 style="margin-bottom: 0.5rem; color: #222; font-size: 1.2rem;">Do you ship internationally?</h4>
                     <p style="color: #666; margin: 0;">Currently, we only ship coffee beans within the US and Canada.</p>
                 </div>
@@ -195,6 +197,8 @@
         </div>
     </footer>
 
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

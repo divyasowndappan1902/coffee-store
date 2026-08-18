@@ -121,3 +121,24 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+// Dashboard Sidebar Toggle
+const dashboardHamburger = document.querySelector('.dashboard-hamburger');
+const sidebar = document.querySelector('.sidebar');
+if (dashboardHamburger && sidebar) {
+    dashboardHamburger.addEventListener('click', () => {
+        dashboardHamburger.classList.toggle('active');
+        sidebar.classList.toggle('active');
+    });
+    
+    // Close sidebar when clicking outside on mobile
+    document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768 && 
+            sidebar.classList.contains('active') && 
+            !sidebar.contains(e.target) && 
+            !dashboardHamburger.contains(e.target)) {
+            sidebar.classList.remove('active');
+            dashboardHamburger.classList.remove('active');
+        }
+    });
+}

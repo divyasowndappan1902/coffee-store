@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="dashboard-body bg-light">
 
@@ -34,11 +36,16 @@
         <main class="dashboard-main">
             <!-- Topbar -->
             <header class="dashboard-header">
+                <div class="hamburger dashboard-hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
                 <div class="search-bar">
                     <input type="text" placeholder="Search coffees, accessories...">
                 </div>
                 <div class="user-profile" style="display: flex; align-items: center; gap: 0.8rem;">
-                    <div class="avatar bg-accent text-white" style="margin-left: 0.5rem;">C</div>
+                    <div class="avatar bg-accent text-white" style="margin-left: 0.5rem;"><i class="fa-solid fa-user"></i></div>
                     <div style="display: flex; flex-direction: column; line-height: 1.2;">
                         <span style="font-weight: 600;">Customer Name</span>
                         <span id="user-email-display" style="font-size: 0.75rem; color: #aaa;">customer@example.com</span>

@@ -16,12 +16,16 @@
     box-sizing: border-box;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: clip;
+}
+
 body {
     font-family: var(--font-family);
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -88,6 +92,16 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--primary-color);
     color: #fff;
 }
+
+.btn-outline-accent {
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+}
+.btn-outline-accent:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
 .full-width { width: 100%; }
 
 /* Navbar */
@@ -97,6 +111,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     padding: 1.5rem 5%;
     background-color: var(--bg-color);
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -216,10 +231,21 @@ h1, h2, h3, h4, h5, h6 {
 .product-card h3 { margin: 1.5rem 0 0.5rem; font-size: 1.2rem; }
 .product-card .price { color: var(--accent-color); font-weight: 700; font-size: 1.1rem; margin-bottom: 1rem; }
 
-.blog-card { padding: 0; }
-.blog-card .card-content { padding: 1.5rem; }
-.blog-card h4 { margin-bottom: 0.5rem; font-size: 1.1rem; }
-.blog-card .read-more { color: var(--accent-color); font-weight: 600; text-decoration: none; display: inline-block; margin-top: 1rem; }
+.blog-card { 
+    padding: 0; 
+    display: flex; 
+    flex-direction: column; 
+    height: 100%; 
+}
+.blog-card .card-content { 
+    padding: 1.5rem; 
+    display: flex; 
+    flex-direction: column; 
+    flex: 1; 
+    align-items: flex-start;
+}
+.blog-card h4 { margin-bottom: 0.5rem; font-size: 1.25rem; font-weight: 600; }
+.blog-card .read-more { margin-top: auto; padding: 0.5rem 1.5rem; font-size: 0.9rem; font-weight: 500; }
 
 /* Hero Section specific (Home) */
 .hero-section {
@@ -324,7 +350,7 @@ h1, h2, h3, h4, h5, h6 {
 .login-container {
     display: flex;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
 }
 
 .login-image-side {
@@ -792,7 +818,11 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 768px) {
     .sidebar { transform: translateX(-100%); transition: var(--transition); z-index: 1000;}
     .sidebar.active { transform: translateX(0); }
-    .dashboard-main { margin-left: 0; }
+    .dashboard-main { 
+        margin-left: 0; 
+        overflow-x: clip;
+        max-width: 100vw;
+    }
 }
 
 /* Custom Background Images for Sections */
@@ -810,4 +840,54 @@ h1, h2, h3, h4, h5, h6 {
 }
 .section.bg-light#newsletter {
     background-color: transparent;
+}
+
+/* --- 320px Responsiveness Adjustments --- */
+@media screen and (max-width: 480px) {
+    /* Global Typography & Spacing */
+    .section { padding: 3rem 0 !important; }
+    .hero-content h1 { font-size: 2.5rem; }
+    .quote-box h2 { font-size: 1.8rem; }
+    .section-title h2 { font-size: 1.8rem; }
+    .page-header { padding: 6rem 0 3rem; }
+    
+    /* Grids */
+    .grid-2, .grid-3, .gallery-grid, .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    /* Forms & Auth */
+    .login-glass-card { padding: 1.5rem; }
+    .login-form-side { padding: 1rem; }
+    .glass-form .input-group input { padding: 0.8rem; font-size: 0.9rem; }
+    
+    /* Dashboard */
+    .dashboard-header { padding: 1rem; flex-wrap: nowrap; gap: 1rem; height: auto; }
+    .search-bar { display: none; }
+    .dashboard-hamburger { display: flex; order: 1; flex-shrink: 0; }
+    .user-profile { margin-left: auto; order: 2; max-width: calc(100% - 40px); }
+    .user-profile > div:last-child { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+    .user-profile span { overflow: hidden; text-overflow: ellipsis; display: block; }
+    
+    /* Prevent overflow on inline flex layouts in dashboard views */
+    .dashboard-view [style*="justify-content: space-between"] {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 1rem !important;
+    }
+    
+    .dashboard-content { padding: 1rem; }
+    .stat-card { padding: 1.5rem; }
+    
+    /* Tables */
+    .table-card { overflow-x: auto; width: 100%; }
+    .dashboard-table { white-space: nowrap; }
+    
+    /* Adjust footer */
+    .footer { padding: 3rem 0 1rem; }
+    .footer-grid { margin-bottom: 1.5rem; }
+    
+    /* Split section */
+    .split-section { gap: 2rem; }
 }

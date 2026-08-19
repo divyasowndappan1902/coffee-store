@@ -590,6 +590,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Responsive Adjustments */
 @media screen and (max-width: 992px) {
     .split-section { flex-direction: column; text-align: center; }
+    .split-image { max-width: 100%; width: 100%; max-height: 500px; object-fit: cover; }
     .hero-section { flex-direction: column-reverse; text-align: center; padding-top: 2rem; }
     .hero-content { padding-right: 0; display: flex; flex-direction: column; align-items: center; margin-top: 2rem;}
     .hero-content h1 { font-size: 3.5rem; }
@@ -945,6 +946,7 @@ h1, h2, h3, h4, h5, h6 {
     .login-glass-card { padding: 1.5rem; }
     .login-form-side { padding: 1rem; }
     .glass-form .input-group input { padding: 0.8rem; font-size: 0.9rem; }
+    .social-login { flex-direction: column; gap: 0.8rem; }
     
     /* Dashboard */
     .dashboard-header { padding: 1rem; flex-wrap: nowrap; gap: 1rem; height: auto; }
